@@ -58,7 +58,7 @@ body {
   body > * {
     flex: 1; }
 
-header, p {
+header, #gallery, footer, footer p, p {
   min-width: 100%; }
 
 nav {
@@ -124,6 +124,14 @@ input {
 
 button {
   width: 10%; }
+
+#gallery {
+  display: flex;
+  flex-flow: row wrap; }
+
+footer {
+  display: flex;
+  flex-flow: row wrap; }
 
 p {
   font-family: "Cormorant Garamond", serif;
