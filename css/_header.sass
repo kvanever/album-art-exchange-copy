@@ -2,14 +2,17 @@
 
 header
   display: flex
-  justify-content: center
+  justify-content: space-between
+  align-items: center
   background: $timberwolf
   font-family: $header-font
+  @extend %full-width 
   span
     color: $red
 
+nav
+  margin-right: $margin
+
 h1
   font-size: 2em
-  align-self: center
-  margin-right: 1em
-  margin-left: 0.5em
+  margin: $margin

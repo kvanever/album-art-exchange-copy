@@ -49,13 +49,17 @@ table {
   box-sizing: border-box; }
 
 body {
+  background: #E8E9EB;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   align-items: center;
   width: 90%;
   margin: auto; }
   body > * {
     flex: 1; }
+
+header, p {
+  min-width: 100%; }
 
 nav {
   position: relative;
@@ -85,6 +89,11 @@ nav {
     nav:focus a {
       opacity: 1;
       visibility: visible;
+      background: #DDD5D0;
+      width: 4.2em;
+      display: block;
+      text-decoration: none;
+      font-weight: bold;
       pointer-events: auto; }
   nav::before {
     content: "Menu";
@@ -92,16 +101,32 @@ nav {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   background: #DDD5D0;
   font-family: "Exo", sans-serif; }
   header span {
     color: #ff2600; }
 
+nav {
+  margin-right: 0.5em; }
+
 h1 {
   font-size: 2em;
-  align-self: center;
-  margin-right: 1em;
-  margin-left: 0.5em; }
+  margin: 0.5em; }
+
+form {
+  min-width: 50%; }
+
+input {
+  width: 80%;
+  height: 3em; }
+
+button {
+  width: 10%; }
+
+p {
+  font-family: "Cormorant Garamond", serif;
+  margin: 0.5em; }
 
 /*# sourceMappingURL=styles.css.map */
