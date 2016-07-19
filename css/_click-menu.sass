@@ -1,10 +1,17 @@
 nav
   position: relative
-  display: inline-block
+  display: flex
+  flex-direction: column
   a
     opacity: 0
     visibility: hidden
+    line-height: 1.5em
     transition: visibility 0.5s
+    position: absolute
+    z-index: 1
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        transform: translateY(calc(100% * #{$i}))
   &:focus
     pointer-events: none
     a
@@ -13,3 +20,4 @@ nav
       pointer-events: auto
   &::before
     content: "Menu"
+    font-size: 1.2em

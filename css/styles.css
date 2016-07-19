@@ -1,3 +1,53 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 body {
   display: flex;
   flex-flow: column nowrap;
@@ -9,11 +59,27 @@ body {
 
 nav {
   position: relative;
-  display: inline-block; }
+  display: flex;
+  flex-direction: column; }
   nav a {
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.5s; }
+    line-height: 1.5em;
+    transition: visibility 0.5s;
+    position: absolute;
+    z-index: 1; }
+    nav a:nth-child(1) {
+      transform: translateY(calc(100% * 1)); }
+    nav a:nth-child(2) {
+      transform: translateY(calc(100% * 2)); }
+    nav a:nth-child(3) {
+      transform: translateY(calc(100% * 3)); }
+    nav a:nth-child(4) {
+      transform: translateY(calc(100% * 4)); }
+    nav a:nth-child(5) {
+      transform: translateY(calc(100% * 5)); }
+    nav a:nth-child(6) {
+      transform: translateY(calc(100% * 6)); }
   nav:focus {
     pointer-events: none; }
     nav:focus a {
@@ -21,14 +87,21 @@ nav {
       visibility: visible;
       pointer-events: auto; }
   nav::before {
-    content: "Menu"; }
+    content: "Menu";
+    font-size: 1.2em; }
 
 header {
   display: flex;
+  justify-content: center;
   background: #DDD5D0;
-  padding: 3%;
   font-family: "Exo", sans-serif; }
   header span {
     color: #ff2600; }
+
+h1 {
+  font-size: 2em;
+  align-self: center;
+  margin-right: 1em;
+  margin-left: 0.5em; }
 
 /*# sourceMappingURL=styles.css.map */
