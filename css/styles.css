@@ -7,4 +7,28 @@ body {
   body > * {
     flex: 1; }
 
+nav {
+  position: relative;
+  display: inline-block; }
+  nav a {
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s; }
+  nav:focus {
+    pointer-events: none; }
+    nav:focus a {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto; }
+  nav::before {
+    content: "Menu"; }
+
+header {
+  display: flex;
+  background: #DDD5D0;
+  padding: 3%;
+  font-family: "Exo", sans-serif; }
+  header span {
+    color: #ff2600; }
+
 /*# sourceMappingURL=styles.css.map */
