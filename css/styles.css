@@ -58,7 +58,7 @@ body {
   body > * {
     flex: 1; }
 
-header, #gallery, footer, footer p, p {
+header, #gallery, footer, footer p, #ad, p {
   min-width: 100%; }
 
 nav {
@@ -116,7 +116,8 @@ h1 {
   margin: 0.5em; }
 
 form {
-  min-width: 50%; }
+  min-width: 50%;
+  margin: 0.5em; }
 
 input {
   width: 80%;
@@ -128,10 +129,31 @@ button {
 #gallery {
   display: flex;
   flex-flow: row wrap; }
+  #gallery figure {
+    margin: 0.5em; }
+    @media screen and (min-width: 540px) {
+      #gallery figure {
+        flex: 1 1 30%; } }
+    #gallery figure img {
+      width: 100%; }
 
 footer {
   display: flex;
   flex-flow: row wrap; }
+  footer .social-media {
+    flex: 1; }
+
+#ad {
+  text-align: center;
+  margin: 0.5em; }
+  #ad img {
+    width: 100%;
+    max-width: 610px; }
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em; }
 
 p {
   font-family: "Cormorant Garamond", serif;

@@ -2,3 +2,9 @@
   @extend %full-width
   display: flex
   flex-flow: row wrap
+  figure
+    margin: $margin
+    @media screen and (min-width: $small-breakpoint)
+      flex: 1 1 30%
+    img
+      width: 100%
