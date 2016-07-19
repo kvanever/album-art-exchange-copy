@@ -1,3 +1,10 @@
-
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 90%;
+  margin: auto; }
+  body > * {
+    flex: 1; }
 
 /*# sourceMappingURL=styles.css.map */
