@@ -1,28 +1,34 @@
 nav
   position: relative
   display: flex
-  flex-direction: column
-  a
-    opacity: 0
-    visibility: hidden
-    line-height: 1.5em
-    transition: visibility 0.5s
-    position: absolute
-    z-index: 1
-    @for $i from 1 through 6
-      &:nth-child(#{$i})
-        transform: translateY(calc(100% * #{$i}))
-  &:focus
-    pointer-events: none
+  flex-direction: row
+  justify-content: space-around
+  min-width: 100%
+  @media screen and (max-width: $medium-breakpoint)
+    flex-direction: column
+    justify-content: flex-start
+    min-width: auto
     a
-      opacity: 1
-      visibility: visible
-      background: $timberwolf
-      width: 4.2em
-      display: block
-      text-decoration: none
-      font-weight: bold
-      pointer-events: auto
-  &::before
-    content: "Menu"
-    font-size: 1.2em
+      opacity: 0
+      visibility: hidden
+      line-height: 1.5em
+      transition: visibility 0.5s
+      position: absolute
+      z-index: 1
+      @for $i from 1 through 6
+        &:nth-child(#{$i})
+          transform: translateY(calc(100% * #{$i}))
+    &:focus
+      pointer-events: none
+      a
+        opacity: 1
+        visibility: visible
+        background: $timberwolf
+        width: 4.2em
+        display: block
+        text-decoration: none
+        font-weight: bold
+        pointer-events: auto
+    &::before
+      content: "Menu"
+      font-size: 1.2em

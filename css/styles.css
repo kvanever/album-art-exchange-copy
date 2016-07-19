@@ -64,40 +64,47 @@ header, #gallery, footer, footer p, #ad, p {
 nav {
   position: relative;
   display: flex;
-  flex-direction: column; }
-  nav a {
-    opacity: 0;
-    visibility: hidden;
-    line-height: 1.5em;
-    transition: visibility 0.5s;
-    position: absolute;
-    z-index: 1; }
-    nav a:nth-child(1) {
-      transform: translateY(calc(100% * 1)); }
-    nav a:nth-child(2) {
-      transform: translateY(calc(100% * 2)); }
-    nav a:nth-child(3) {
-      transform: translateY(calc(100% * 3)); }
-    nav a:nth-child(4) {
-      transform: translateY(calc(100% * 4)); }
-    nav a:nth-child(5) {
-      transform: translateY(calc(100% * 5)); }
-    nav a:nth-child(6) {
-      transform: translateY(calc(100% * 6)); }
-  nav:focus {
-    pointer-events: none; }
-    nav:focus a {
-      opacity: 1;
-      visibility: visible;
-      background: #DDD5D0;
-      width: 4.2em;
-      display: block;
-      text-decoration: none;
-      font-weight: bold;
-      pointer-events: auto; }
-  nav::before {
-    content: "Menu";
-    font-size: 1.2em; }
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 100%; }
+  @media screen and (max-width: 900px) {
+    nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: auto; }
+      nav a {
+        opacity: 0;
+        visibility: hidden;
+        line-height: 1.5em;
+        transition: visibility 0.5s;
+        position: absolute;
+        z-index: 1; }
+        nav a:nth-child(1) {
+          transform: translateY(calc(100% * 1)); }
+        nav a:nth-child(2) {
+          transform: translateY(calc(100% * 2)); }
+        nav a:nth-child(3) {
+          transform: translateY(calc(100% * 3)); }
+        nav a:nth-child(4) {
+          transform: translateY(calc(100% * 4)); }
+        nav a:nth-child(5) {
+          transform: translateY(calc(100% * 5)); }
+        nav a:nth-child(6) {
+          transform: translateY(calc(100% * 6)); }
+      nav:focus {
+        pointer-events: none; }
+        nav:focus a {
+          opacity: 1;
+          visibility: visible;
+          background: #DDD5D0;
+          width: 4.2em;
+          display: block;
+          text-decoration: none;
+          font-weight: bold;
+          pointer-events: auto; }
+      nav::before {
+        content: "Menu";
+        font-size: 1.2em; } }
 
 header {
   display: flex;
@@ -107,6 +114,9 @@ header {
   font-family: "Exo", sans-serif; }
   header span {
     color: #ff2600; }
+  @media screen and (min-width: 900px) {
+    header {
+      flex-direction: column; } }
 
 nav {
   margin-right: 0.5em; }

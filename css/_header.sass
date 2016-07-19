@@ -6,10 +6,11 @@ header
   align-items: center
   background: $timberwolf
   font-family: $header-font
-  @extend %full-width 
+  @extend %full-width
   span
     color: $red
-
+  @media screen and (min-width: $medium-breakpoint)
+    flex-direction: column
 nav
   margin-right: $margin
 
